@@ -12,8 +12,8 @@ export async function GET(request) {
     const skill = url.searchParams.get('skill');
 
     const client = await clientPromise;
-    const db = client.db(); //sir ne bracket khali chhoda tha mera database ka naam "test" hai
-    const coll = db.collection('companies'); //sir ke collection ka naam "workbook" hai mine is "companies"
+    const db = client.db("test");
+    const coll = db.collection('companies');
 
     const filter = {};
     if (name) filter.name = { $regex: new RegExp(name, 'i') };

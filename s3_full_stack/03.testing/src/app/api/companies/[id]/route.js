@@ -11,7 +11,7 @@ export async function GET(request, { params }) {
     }
 
     const client = await clientPromise;
-    const db = client.db("workbook");          
+    const db = client.db("test");          
     const coll = db.collection("companies");  
 
 

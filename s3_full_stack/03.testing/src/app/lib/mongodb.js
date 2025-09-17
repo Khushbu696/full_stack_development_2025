@@ -1,7 +1,7 @@
 // lib/mongodb.js
 import { MongoClient } from 'mongodb';
 
-const MONGODB_URI = 'mongodb+srv://khushbupatelcg_db_user:XOmGQj79bkmpdE94@workbook.rbaijcp.mongodb.net';
+const MONGODB_URI = process.env.MONGODB_URI;
 
 if (!MONGODB_URI) {
   throw new Error('MONGODB_URI is required.');
